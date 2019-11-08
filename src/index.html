@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Store</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- Dexie API -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/dexie/2.0.4/dexie.min.js"
+        integrity="sha256-ubffRsoh9QK5xJC/u3s3drtGFBZUHBm9bHFRzYvtkJI=" crossorigin="anonymous"></script>
+    <script async src="https://kit.fontawesome.com/9a74258a86.js" crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript main.js -->
+    <script type="module" src="../js/main.js"></script>
+</head>
+
+<body>
+    <div class="container text-center">
+        <h1 class="bg-light py-4 text-info"><i class="fas fa-plug"></i> Products Store</h1>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <form class="w-50">
+            <input type="text" class="form-control" disabled placeholder="Id" id="productId">
+            <input type="text" class="form-control" placeholder="Product Name" id="productName">
+            <div class="row form-group">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Seller" id="seller">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Price" id="price">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Create, read, update and delete buttons -->
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-success" id="btn-create">Create</button>
+        <button class="btn btn-primary" id="btn-read">Read</button>
+        <button class="btn btn-warning" id="btn-update">Update</button>
+        <button class="btn btn-danger" id="btn-delete">Delete All</button>
+    </div>
+
+    <div class="container d-flex justify-content-center">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Seller</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+    <div class="container d-flex">
+        <div id="notfound" class="m-auto text-muted"></div>
+    </div>
+    <div class="container text-center w-50 d-flex justify-content-center">
+        <div class="alert alert-success insertmsg" role="alert">
+            Data inserted successfully...!
+        </div>
+        <div class="alert alert-warning updatemsg" role="alert">
+            Data updated...!Refresh to see the upgrade
+        </div>
+        <div class="alert alert-danger deletemsg" role="alert">
+            Data Deleted...!
+        </div>
+    </div>
+</body>
+
+</html>

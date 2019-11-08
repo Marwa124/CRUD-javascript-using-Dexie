@@ -1,0 +1,27 @@
+.d-flex input{
+    margin: .9rem 0rem;
+}
+.d-flex button{
+    margin: 1.5rem .6rem;
+    padding: .3rem 2.4rem;
+}
+.container table{
+    margin: 1rem 1rem;
+    overflow-x: scroll;
+}
+table .btnEdit{
+    color: lightgreen;
+    cursor: pointer;
+}
+table .btnDelete{
+    color: tomato;
+    cursor: pointer;
+}
+.insertmsg, .updatemsg, .deletemsg{
+    position: absolute;
+    top: -50px;
+    transition: all 1.5s;
+}
+.slideDown{
+    transform: translateY(70px);
+}
